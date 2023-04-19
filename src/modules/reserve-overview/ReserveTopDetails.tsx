@@ -116,7 +116,7 @@ export const ReserveTopDetails = ({ underlyingAsset }: ReserveTopDetailsProps) =
             </Button>
 
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
-              <MarketLogo size={20} logo={network.networkLogoPath} />
+              <MarketLogo size={20} logo={network?.networkLogoPath ?? ''} />
               <Typography variant="subheader1" sx={{ color: 'common.white' }}>
                 {market.marketTitle} <Trans>Market</Trans>
               </Typography>

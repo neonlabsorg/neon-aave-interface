@@ -55,7 +55,7 @@ export const MigrationTopPanel = () => {
               <Box sx={{ display: 'flex', alignItems: 'center' }}>
                 <MarketLogo
                   size={32}
-                  logo={network.networkLogoPath}
+                  logo={network?.networkLogoPath ?? ''}
                   testChainName={marketNaming.testChainName}
                 />
                 <Trans>Migrate to {market.marketTitle} v3 Market</Trans>

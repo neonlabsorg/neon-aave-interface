@@ -64191,7 +64191,7 @@ var marketsData2 = Object.keys(marketsData).reduce((acc, value) => {
 function getSupportedChainIds() {
   return Array.from(
     Object.keys(marketsData2).filter((value) => {
-      const isTestnet = networkConfigs2[marketsData2[value].chainId].isTestnet;
+      const isTestnet =  true; // networkConfigs2[marketsData2[value].chainId].isTestnet;
       if (STAGING_ENV || ENABLE_TESTNET) {
         return isTestnet;
       }
@@ -64723,10 +64723,10 @@ populateCache().then(() => console.log("finished"));
 tslib/tslib.es6.js:
   (*! *****************************************************************************
   Copyright (c) Microsoft Corporation.
-  
+
   Permission to use, copy, modify, and/or distribute this software for any
   purpose with or without fee is hereby granted.
-  
+
   THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
   REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
   AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
@@ -64752,12 +64752,12 @@ reflect-metadata/Reflect.js:
   Licensed under the Apache License, Version 2.0 (the "License"); you may not use
   this file except in compliance with the License. You may obtain a copy of the
   License at http://www.apache.org/licenses/LICENSE-2.0
-  
+
   THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
   KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
   WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
   MERCHANTABLITY OR NON-INFRINGEMENT.
-  
+
   See the Apache Version 2.0 License for specific language governing permissions
   and limitations under the License.
   ***************************************************************************** *)

@@ -148,7 +148,7 @@ export const MarketSwitcher = () => {
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
               <MarketLogo
                 size={upToLG ? 32 : 28}
-                logo={network.networkLogoPath}
+                logo={network?.networkLogoPath ?? ''}
                 testChainName={getMarketHelpData(market.marketTitle).testChainName}
               />
               <Box sx={{ mr: 1, display: 'inline-flex', alignItems: 'flex-start' }}>
@@ -313,7 +313,7 @@ export const MarketSwitcher = () => {
           >
             <MarketLogo
               size={32}
-              logo={network.networkLogoPath}
+              logo={network?.networkLogoPath ?? ''}
               testChainName={marketNaming.testChainName}
             />
             <ListItemText sx={{ mr: 0 }}>

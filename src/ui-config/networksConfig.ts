@@ -51,39 +51,16 @@ export type NetworkConfig = {
 export type BaseNetworkConfig = Omit<NetworkConfig, 'explorerLinkBuilder'>;
 
 export const networkConfigs: Record<string, BaseNetworkConfig> = {
-  [ChainId.sepolia]: {
-    name: 'Ethereum Sepolia',
-    publicJsonRPCUrl: [
-      'https://rpc.sepolia.org',
-      'https://rpc2.sepolia.org',
-      'https://rpc.sepolia.online',
-      'https://www.sepoliarpc.space',
-    ],
+  [245022926]: {
+    name: 'NEON Devnet',
+    publicJsonRPCUrl: ['https://devnet.neonevm.org'],
     // publicJsonRPCWSUrl: 'wss://eth-goerli.public.blastapi.io',
     // protocolDataUrl: '',
     baseUniswapAdapter: '0x0',
-    baseAssetSymbol: 'ETH',
-    wrappedBaseAssetSymbol: 'WETH',
+    baseAssetSymbol: 'NEON',
+    wrappedBaseAssetSymbol: 'wNEON',
     baseAssetDecimals: 18,
-    explorerLink: 'https://sepolia.etherscan.io',
-    // usdMarket: true,
-    isTestnet: true,
-    networkLogoPath: '/icons/networks/ethereum.svg',
-  },
-  [ChainId.goerli]: {
-    name: 'Ethereum Görli',
-    publicJsonRPCUrl: [
-      'https://eth-goerli.public.blastapi.io',
-      'https://rpc.ankr.com/eth_goerli',
-      'https://goerli.prylabs.net',
-    ],
-    publicJsonRPCWSUrl: 'wss://eth-goerli.public.blastapi.io',
-    // protocolDataUrl: '',
-    baseUniswapAdapter: '0x0',
-    baseAssetSymbol: 'ETH',
-    wrappedBaseAssetSymbol: 'WETH',
-    baseAssetDecimals: 18,
-    explorerLink: 'https://goerli.etherscan.io',
+    explorerLink: 'https://neonscan.org/',
     // usdMarket: true,
     isTestnet: true,
     networkLogoPath: '/icons/networks/ethereum.svg',

@@ -76,10 +76,11 @@ export enum CustomMarket {
   proto_goerli = 'proto_goerli',
   // external
   // permissioned_market = 'permissioned_market',
+  neon = 'neon',
 }
 
 export const marketsData: {
-  [key in keyof typeof CustomMarket]: MarketDataType;
+  [key: string]: MarketDataType;
 } = {
   [CustomMarket.proto_mainnet_v3]: {
     marketTitle: 'Ethereum',
@@ -537,6 +538,35 @@ export const marketsData: {
       WALLET_BALANCE_PROVIDER: markets.AaveV2Fuji.WALLET_BALANCE_PROVIDER,
       UI_POOL_DATA_PROVIDER: markets.AaveV2Fuji.UI_POOL_DATA_PROVIDER,
       UI_INCENTIVE_DATA_PROVIDER: markets.AaveV2Fuji.UI_INCENTIVE_DATA_PROVIDER,
+    },
+  },
+
+  [CustomMarket.neon]: {
+    marketTitle: 'Neon',
+    chainId: 245022926,
+    v3: false,
+    isFork: false,
+    enabledFeatures: {
+      // governance: false,
+      // staking: false,
+      // liquiditySwap: false,
+      // collateralRepay: false,
+      // incentives: false,
+    },
+    addresses: {
+      LENDING_POOL_ADDRESS_PROVIDER: '0x275443DA36f4e1a4f105d6E2792D867B20cA8089',
+      LENDING_POOL: '0x43026bEBbDb8BAdF6944B0c335ad8F9E6aa9Ddc0',
+      WETH_GATEWAY: '0x12A022231d82f04d712aE828845e701c26a6Dc46',
+      WALLET_BALANCE_PROVIDER: '0x7A1B44BfC701D1CC32B7DCF46527dbeB5F6a3119',
+      UI_POOL_DATA_PROVIDER: `0x43026bEBbDb8BAdF6944B0c335ad8F9E6aa9Ddc0`, // not found
+      UI_INCENTIVE_DATA_PROVIDER: markets.AaveV2Fuji.UI_INCENTIVE_DATA_PROVIDER, // not found
+      REPAY_WITH_COLLATERAL_ADAPTER: markets.AaveV3Ethereum.REPAY_WITH_COLLATERAL_ADAPTER, // not found
+      SWAP_COLLATERAL_ADAPTER: `0x824656038958cBc320be280e7B6C8a26E7e27197`,
+      COLLECTOR: `0x824656038958cBc320be280e7B6C8a26E7e27197`,
+    },
+    halIntegration: {
+      URL: 'https://devnet.neonevm.org',
+      marketName: 'neon',
     },
   },
 } as const;
