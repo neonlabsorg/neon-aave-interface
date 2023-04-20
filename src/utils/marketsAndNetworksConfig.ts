@@ -95,7 +95,6 @@ export function getSupportedChainIds(): number[] {
   return Array.from(
     Object.keys(marketsData)
       .filter((value) => {
-        console.log('networkConfigs', networkConfigs);
         const isTestnet =
           networkConfigs[marketsData[value as keyof typeof CustomMarket].chainId]?.isTestnet ??
           false;
@@ -135,7 +134,6 @@ const linkBuilder =
   };
 
 export function getNetworkConfig(chainId: ChainId): NetworkConfig {
-  console.log(networkConfigs);
   const config = networkConfigs[chainId];
   if (!config) {
     // this case can only ever occure when a wallet is connected with a unknown chainId which will not allow interaction

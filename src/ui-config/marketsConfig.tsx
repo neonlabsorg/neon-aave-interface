@@ -547,20 +547,20 @@ export const marketsData: {
     v3: false,
     isFork: false,
     enabledFeatures: {
-      // governance: false,
-      // staking: false,
-      // liquiditySwap: false,
-      // collateralRepay: false,
-      // incentives: false,
+      governance: false,
+      staking: false,
+      liquiditySwap: false,
+      collateralRepay: false,
+      incentives: false,
     },
     addresses: {
-      LENDING_POOL_ADDRESS_PROVIDER: '0x275443DA36f4e1a4f105d6E2792D867B20cA8089',
-      LENDING_POOL: '0x43026bEBbDb8BAdF6944B0c335ad8F9E6aa9Ddc0',
-      WETH_GATEWAY: '0x12A022231d82f04d712aE828845e701c26a6Dc46',
-      WALLET_BALANCE_PROVIDER: '0x7A1B44BfC701D1CC32B7DCF46527dbeB5F6a3119',
-      UI_POOL_DATA_PROVIDER: `0x43026bEBbDb8BAdF6944B0c335ad8F9E6aa9Ddc0`, // not found
-      UI_INCENTIVE_DATA_PROVIDER: markets.AaveV2Fuji.UI_INCENTIVE_DATA_PROVIDER, // not found
-      REPAY_WITH_COLLATERAL_ADAPTER: markets.AaveV3Ethereum.REPAY_WITH_COLLATERAL_ADAPTER, // not found
+      LENDING_POOL_ADDRESS_PROVIDER: '0xf426d712985Ecf63066ce4E7c3fD47b3BA2F6277',
+      LENDING_POOL: '0x7C1fB25A973EcBad6dCD08BDaF03eFc8A910eb31',
+      WETH_GATEWAY: '0x173ecAdAf173Cc423919B996D811368552cCa219',
+      WALLET_BALANCE_PROVIDER: '0xBbe4e613405b75E4dC1837B4c5774A3B2664b256', // not found
+      UI_POOL_DATA_PROVIDER: `0xc361B421CA4311117b00352F8D14bf00e93e4c5D`, // not found
+      UI_INCENTIVE_DATA_PROVIDER: `0x3B0f1233b06f06Bbcbd69243d73053e6851c4C0A`, // not found
+      REPAY_WITH_COLLATERAL_ADAPTER: '0x824656038958cBc320be280e7B6C8a26E7e27197',
       SWAP_COLLATERAL_ADAPTER: `0x824656038958cBc320be280e7B6C8a26E7e27197`,
       COLLECTOR: `0x824656038958cBc320be280e7B6C8a26E7e27197`,
     },
