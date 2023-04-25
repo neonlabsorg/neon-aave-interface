@@ -63723,45 +63723,53 @@ var marketsData = {
       UI_POOL_DATA_PROVIDER: markets.AaveV2Fuji.UI_POOL_DATA_PROVIDER,
       UI_INCENTIVE_DATA_PROVIDER: markets.AaveV2Fuji.UI_INCENTIVE_DATA_PROVIDER
     }
+  },
+  ["neon" /* neon */]: {
+    marketTitle: "Neon",
+    chainId: 245022926,
+    v3: false,
+    isFork: false,
+    enabledFeatures: {
+      governance: false,
+      staking: false,
+      liquiditySwap: false,
+      collateralRepay: false,
+      incentives: false
+    },
+    addresses: {
+      LENDING_POOL_ADDRESS_PROVIDER: "0xf426d712985Ecf63066ce4E7c3fD47b3BA2F6277",
+      LENDING_POOL: "0x7C1fB25A973EcBad6dCD08BDaF03eFc8A910eb31",
+      WETH_GATEWAY: "0x173ecAdAf173Cc423919B996D811368552cCa219",
+      WALLET_BALANCE_PROVIDER: "0xBbe4e613405b75E4dC1837B4c5774A3B2664b256",
+      // not found
+      UI_POOL_DATA_PROVIDER: `0xc361B421CA4311117b00352F8D14bf00e93e4c5D`,
+      // not found
+      UI_INCENTIVE_DATA_PROVIDER: `0x3B0f1233b06f06Bbcbd69243d73053e6851c4C0A`,
+      // not found
+      REPAY_WITH_COLLATERAL_ADAPTER: "0x824656038958cBc320be280e7B6C8a26E7e27197",
+      SWAP_COLLATERAL_ADAPTER: `0x824656038958cBc320be280e7B6C8a26E7e27197`,
+      COLLECTOR: `0x824656038958cBc320be280e7B6C8a26E7e27197`
+    },
+    halIntegration: {
+      URL: "https://devnet.neonevm.org",
+      marketName: "neon"
+    }
   }
 };
 
 // src/ui-config/networksConfig.ts
 var import_contract_helpers3 = __toESM(require_cjs());
 var networkConfigs = {
-  [import_contract_helpers3.ChainId.sepolia]: {
-    name: "Ethereum Sepolia",
-    publicJsonRPCUrl: [
-      "https://rpc.sepolia.org",
-      "https://rpc2.sepolia.org",
-      "https://rpc.sepolia.online",
-      "https://www.sepoliarpc.space"
-    ],
+  [245022926]: {
+    name: "NEON Devnet",
+    publicJsonRPCUrl: ["https://devnet.neonevm.org"],
     // publicJsonRPCWSUrl: 'wss://eth-goerli.public.blastapi.io',
     // protocolDataUrl: '',
     baseUniswapAdapter: "0x0",
-    baseAssetSymbol: "ETH",
-    wrappedBaseAssetSymbol: "WETH",
+    baseAssetSymbol: "NEON",
+    wrappedBaseAssetSymbol: "wNEON",
     baseAssetDecimals: 18,
-    explorerLink: "https://sepolia.etherscan.io",
-    // usdMarket: true,
-    isTestnet: true,
-    networkLogoPath: "/icons/networks/ethereum.svg"
-  },
-  [import_contract_helpers3.ChainId.goerli]: {
-    name: "Ethereum G\xF6rli",
-    publicJsonRPCUrl: [
-      "https://eth-goerli.public.blastapi.io",
-      "https://rpc.ankr.com/eth_goerli",
-      "https://goerli.prylabs.net"
-    ],
-    publicJsonRPCWSUrl: "wss://eth-goerli.public.blastapi.io",
-    // protocolDataUrl: '',
-    baseUniswapAdapter: "0x0",
-    baseAssetSymbol: "ETH",
-    wrappedBaseAssetSymbol: "WETH",
-    baseAssetDecimals: 18,
-    explorerLink: "https://goerli.etherscan.io",
+    explorerLink: "https://neonscan.org/",
     // usdMarket: true,
     isTestnet: true,
     networkLogoPath: "/icons/networks/ethereum.svg"
@@ -64191,7 +64199,8 @@ var marketsData2 = Object.keys(marketsData).reduce((acc, value) => {
 function getSupportedChainIds() {
   return Array.from(
     Object.keys(marketsData2).filter((value) => {
-      const isTestnet =  true; // networkConfigs2[marketsData2[value].chainId].isTestnet;
+      var _a7, _b;
+      const isTestnet = (_b = (_a7 = networkConfigs2[marketsData2[value].chainId]) == null ? void 0 : _a7.isTestnet) != null ? _b : false;
       if (STAGING_ENV || ENABLE_TESTNET) {
         return isTestnet;
       }
@@ -64723,10 +64732,10 @@ populateCache().then(() => console.log("finished"));
 tslib/tslib.es6.js:
   (*! *****************************************************************************
   Copyright (c) Microsoft Corporation.
-
+  
   Permission to use, copy, modify, and/or distribute this software for any
   purpose with or without fee is hereby granted.
-
+  
   THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
   REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
   AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
@@ -64752,12 +64761,12 @@ reflect-metadata/Reflect.js:
   Licensed under the Apache License, Version 2.0 (the "License"); you may not use
   this file except in compliance with the License. You may obtain a copy of the
   License at http://www.apache.org/licenses/LICENSE-2.0
-
+  
   THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
   KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
   WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
   MERCHANTABLITY OR NON-INFRINGEMENT.
-
+  
   See the Apache Version 2.0 License for specific language governing permissions
   and limitations under the License.
   ***************************************************************************** *)
